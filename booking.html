@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+
+Created by: Tarek Jamous
+e-mail: taja1900@student.miun.se
+Created on a date: 3/24/2020.
+ Modify: 3/27/2020.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="This airline website." name="description">
+    <meta content="Tarek Jamous" name="student">
+    <title>Booking</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<header>
+
+    <ul id="left-side">
+        <li><a href="index.html"> <img alt="airline website" height="50" src="img/logo.png" width="50"/></a></li>
+    </ul>
+
+    <ul id="right-side">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="ourfleet.html"> Our Fleet</a></li>
+        <li><a href="booking.html"> Booking</a></li>
+        <li><a href="employees.html"> Employees</a></li>
+        <li><a href="contactus.html"> Contact us</a></li>
+        <li><a href="aboutus.html"> About us</a></li>
+    </ul>
+</header>
+
+<!-- my code -->
+<main class="row">
+
+    <section class="column left-">
+        <form autocomplete="on" id="formInfo" method="post" name="form" onsubmit="chickValue()">
+
+            <label>First Name:
+                <input id="firstName" pattern="\S+.*" placeholder="First name" required type="text"/>
+            </label>
+
+            <label>Last Name:
+                <input id="lastName" pattern="\S+.*" placeholder="Last name" required type="text"/>
+            </label>
+
+            <label>Social Number:
+                <input id="personNr" pattern="[0-9]{10}" placeholder="000000xxxx" required type=""/>
+            </label>
+
+            <label for="classType">Class:
+                <input id="classType" list="classes" placeholder="Select a class" required type="text"/>
+                <datalist id="classes">
+                    <option value="Economy">
+                    <option value="Business">
+                </datalist>
+            </label>
+
+            <label for="seatNumber">Seat Number:
+                <input id="seatNumber" list="numbers" placeholder="Select a Seat Number" required type="number"/>
+                <datalist id="numbers">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                    <option value="9">
+                    <option value="10">
+                    <option value="11">
+                    <option value="12">
+                    <option value="13">
+                    <option value="14">
+                    <option value="15">
+                    <option value="16">
+                    <option value="17">
+                    <option value="18">
+                </datalist>
+            </label>
+
+            <input class="sub" type="submit" value="Submit"/> <!--onclick="getInputValue();"/>  -->
+            <input class="sub" onclick="resetFunction()" type="reset" value="Clear"/>
+        </form>
+    </section>
+
+    <section class="column right-">
+        <!--
+                <table id = "canvas">
+                    <tbody id="tablechair"></tbody>
+                </table>
+               -->
+        <canvas class="canvasC" id="canvas">
+
+        </canvas>
+        <!--   -->
+    </section>
+
+</main>
+
+<footer>
+    <h6><strong>&copy; 2020 by taja1900 , IncAll Rights Reserved.</strong></h6>
+    <address>
+        Contact us at <a href="mailto:taja1900@student.miun.se">taja1900@student.miun.se</a>
+    </address>
+</footer>
+
+</body>
+</html>
