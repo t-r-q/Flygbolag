@@ -1,0 +1,207 @@
+body{
+    background-image: url("../img/background.jpg");
+    background-size: 100% auto;
+    opacity: 0.9;
+    background-color:aliceblue;
+    max-width: 960px;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+/* Style the header */
+header{
+    backface-visibility: visible;
+}
+
+#left-side{
+    float: left;
+}
+ul li{
+    list-style-type: none;
+}
+#right-side{
+    float: right;
+}
+#right-side li{
+    float: left;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Style the footer */
+footer{
+    border-radius: 90px;
+    clear: both;
+    position:absolute;
+    background: azure;
+    text-align: center;
+    padding: 2px;
+    bottom:0;
+    width:960px;
+}
+
+/* Style the list inside the article */
+
+article {
+    float: left;
+    padding: 30px;
+    width: 80%;
+    height: 200px;
+}
+
+#title {
+    text-align: center;
+}
+#contactus {
+    text-align: center;
+}
+
+b{ background-color: red; }
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*------------CONTACT PAGE -----------------------------*/
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    #contactus, span.contact { background-color: red;}
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    #contactus, span.contact { background-color: blue;}
+}
+@media screen and (min-width: 1025px) {
+    #contactus, span.contact { background-color: green; }
+}
+
+/*-----------------------------------------*/
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+    right-side {width: 25%;}
+    left-side{width: 25%;}
+    title {width: 50%;}
+    footer {width: 45%;}
+    header {width: 35%;}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+    right-side {width: 70%;}
+    left-side{width: 85%;}
+    title {width: 70%;}
+    footer {width: 65%;}
+    header {width: 65%;}
+}
+
+@media only screen and  (min-width: 1025px) {
+    right-side {width: 100%;}
+
+}
+
+/*--------------- Images --------------------------*/
+
+#left-aside {
+position: fixed;
+    top: 30%;
+    left: 10%;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap:10px;
+    grid-gap:10px;
+
+}
+.left-photos {
+    padding: 25px;
+    place-items: center;
+}
+
+.left-photos:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 160, 180, 0.5);
+}
+
+#expandedImg{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+}
+
+/*-----------------------------------------*/
+
+.row {
+    top: 40%;
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.column{
+    float: left;
+    padding: 5px;
+    max-width: 300px;
+}
+
+.left- {
+    top: 10%;
+    position: absolute;
+    width: 50%;
+
+}
+
+.right- {
+    top: 30%;
+    position: absolute;
+    right: 200px;
+    width: 50%;
+}
+/*  ---------------------------------  */
+.textblur {
+    color: transparent;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/*  ---------------------------------  */
+.canvasC{
+    width: auto;
+    height: auto;
+}
+
+.green   { background-color: #008000; }
+.blue   { background-color: #0000ff; }
+.red    { background-color: #ff262f; }
+
+/*  ---------------------------------  */
+
+form {
+    padding: 2em;
+
+}
+.input {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 1ch;
+}
+
+input {
+    width: 90%;
+    font: inherit;
+    padding: 0.25em 0.5em;
+    border: 0.125em solid hsl(30, 76%, 10%);
+    outline: none;
+}
+
+/* Show red borders when filled, but invalid */
+input :not(:placeholder-shown) {
+    border-color: hsl(0, 76%, 50%);
+}
+
+/* Show green borders when valid */
+input:valid {
+    border-color: hsl(120, 76%, 50%);
+}
